@@ -1,3 +1,4 @@
+import React from "react";
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 //created a GalleryList component that takes two props galleryList and className
