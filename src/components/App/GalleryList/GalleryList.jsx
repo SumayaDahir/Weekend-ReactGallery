@@ -1,8 +1,15 @@
-function GalleryList() {
+import GalleryItem from "../GalleryItem/GalleryItem";
+
+function GalleryList({ galleryList, className }) {
+    console.log(galleryList);
     return (
-
-        <> <p>Gallery goes here</p></>
-    )
-}
-
-export default GalleryList
+        <div className={className}>
+            {galleryList.map((item) => (
+                <GalleryItem key={item.id} className="list-items" item={item} />
+            ))}
+        </div>
+    );
+  }
+  
+  
+  export default GalleryList;
