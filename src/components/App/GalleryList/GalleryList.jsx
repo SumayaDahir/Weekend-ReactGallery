@@ -9,7 +9,7 @@ function GalleryList({ galleryList, className, handleLike }) {
         // assigned a unique id to the key in the GalleryItem component with a classname and item
         <div className={className}>
             {galleryList.map((item) => (
-        <GalleryItem item={item} key={item.id} handleLike={handleLike} />
+        <GalleryItem  key={item.id} item={item} handleLike={handleLike} />
         ))}
         </div>
     );
