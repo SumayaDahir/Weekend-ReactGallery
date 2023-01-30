@@ -21,6 +21,16 @@ function App() {
     fetchData(setGalleryList);
   }, []);
 
+  const handleLike = (id) => {
+    axios.put(`/gallery/like/${id}`)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -38,7 +48,7 @@ function App() {
         
     </div>
   </header>
-        <GalleryList galleryList={galleryList} className="list" />
+        <GalleryList galleryList={galleryList} className="list" handleLike={handleLike} />
      </div>
   
   );

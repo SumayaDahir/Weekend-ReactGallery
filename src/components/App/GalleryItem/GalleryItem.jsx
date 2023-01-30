@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import './GalleryItem.css';
 
-function GalleryItem({ item, className }) {
+function GalleryItem({ item, className, handleLike }) {
   const [showDescription, setShowDescription] = useState(false);
   const [likes, setLikes] = useState(0);
 
@@ -17,15 +17,13 @@ function GalleryItem({ item, className }) {
         />
         </div>
       </div>
-      <div style={{ display: showDescription ? "block" : "none" }}>
-      <p className="description">{item.description}</p>
+      <div style={{ display: showDescription ? 'block' : 'none' }}>
+        <p>{item.description}</p>
       </div>
-      <div className="likes-container">
-      <button onClick={() => setLikes(likes + 1)}>LOVE</button>
+      <button onClick={() => {
+        setLikes(likes + 1); handleLike(item.id); }}>LOVE</button>
       <p> {likes} People love this</p>
-      </div>
     </div>
-    
   );
 }
 
