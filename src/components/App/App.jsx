@@ -5,7 +5,7 @@ import './App.css';
 
 function fetchData(setGalleryList) {
   axios
-    .get("/gallery")``
+    .get("/gallery")
     .then((response) => {
       console.log(response.data)
       setGalleryList(response.data);

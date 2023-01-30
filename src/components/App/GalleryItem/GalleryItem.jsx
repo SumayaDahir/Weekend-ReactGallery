@@ -7,13 +7,13 @@ function GalleryItem({ item, className }) {
 
   return (
     <div className={className}>
-      <div style={{ display: showDescription ? "none" : "invisable" }}>
+      <div style={{ display: showDescription ? "none" : "block" }}>
         <img
           src={item.path}
           onClick={() => setShowDescription(!showDescription)}
         />
       </div>
-      <div style={{ display: showDescription ? "invisable" : "none" }}>
+      <div style={{ display: showDescription ? "block" : "none" }}>
         <p>{item.description}</p>
       </div>
       <button onClick={() => setLikes(likes + 1)}>LOVE!</button>
