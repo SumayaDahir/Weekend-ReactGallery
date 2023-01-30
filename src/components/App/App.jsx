@@ -14,7 +14,6 @@ function fetchData(setGalleryList) {
       console.error("There was an error getting photos", err);
     });
 }
-
 function App() {
   const [galleryList, setGalleryList] = useState([]);
 
@@ -25,15 +24,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
-      </header>
-      <section>
-        <GalleryList galleryList={galleryList} className="list" />
-      </section>
+        <div className="App-title">
+        <nav>
+    <ul>
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">POPULAR PLACES</a></li>
+  <li><a href="#">CONTACT US</a></li>
+    </ul>
+    </nav>
+    <div className="content">
+    <h1>  Travel Gallery</h1>
     </div>
+        
+    </div>
+  </header>
+        <GalleryList galleryList={galleryList} className="list" />
+     </div>
+  
   );
 }
 
 export default App;
-
-
