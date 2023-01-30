@@ -4,7 +4,7 @@ import GalleryList from "./GalleryList/GalleryList";
 import "./App.css";
 
 
-//create a function to fetchData from the serverside
+//create a function to fetchData from the serverside using the GET method
 //update state with the response
 function fetchData(setGalleryList) {
   axios
@@ -36,7 +36,7 @@ function App() {
       .then((response) => {
         setGalleryList((prevGalleryList) =>
           prevGalleryList.map((item) => {
-          // check if the current item's id matches the id passed in
+          //check if the current item's id matches the id passed in
           //if it does then increment the likes
             if (item.id === id) {
               item.likes += 1;
