@@ -4,14 +4,6 @@
 
 Before you get started make sure to look through the code that has been provided. Server side code to retrieve data (`GET`) and like a photo (`PUT`) have been provided for you. For practice, we recommend testing out these routes in Postman. You should not need to modify these routes for base mode.
 
-## Technologies
-
-- React
-- Express
-- Node
-- HTML
-- CSS
-
 ### Requirements
 
 There is no database component to base mode. All data is stored in an array on the server. Before you get started, add a few images to the `public/images` folder and modify the `server/modules/data.js` to include an `id`, `title`, `description` and `path for` each of your images. Each `id` should be a unique number (e.g. 1, 2, 3...).
@@ -61,7 +53,13 @@ To practice passing values through `props` in React, you will build the gallery 
     - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
     - Update the gallery each time a like button is clicked.
 
+## Technologies
 
+- React
+- Express
+- Node
+- HTML
+- CSS
 
 ## STRETCH GOALS
 
