@@ -1,0 +1,58 @@
+.images-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+  
+  .images-container img {
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    display: flex;
+  }
+  
+  .description {
+    font-size: 15px;
+    font-weight: bold;
+    color:rgb(11, 225, 245);
+    background-color: white;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  button {
+    background-color:rgb(255, 0, 0);
+    color: white;
+    font-family: 'Lato';
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: #ff0000;
+    background-color: #f5f5f5; 
+    transform: scale(1.1); 
+    transition: all 0.5s ease-in-out; 
+}
+  
+
+ p {
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(11, 225, 245);
+    padding: 10px;
+    margin: 50px;
+    border-radius: 25px;
+    background-color: white;
+  }
+
+
+
+p:hover {
+    color:rgb(11, 225, 245);
+    background-color: #f5f5f5; 
+    transform: scale(1.1); 
+    transition: all 0.5s ease-in-out; 
+}

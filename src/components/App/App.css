@@ -17,6 +17,8 @@ body {
   font-family: 'Lato';
   background-image: linear-gradient(rgba(169, 214, 253, 0.3), rgba(169, 214, 253, 0.3));
   background-image: url(img/travel.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 nav {
