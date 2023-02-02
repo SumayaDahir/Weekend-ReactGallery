@@ -30,7 +30,9 @@ function GalleryItem({ item, className, handleLike }) {
         />
         </div>
       </div>
-      <div style={{ display: showDescription ? 'block' : 'none' }}>
+      <div style={{ display: showDescription ? 'block' : 'none' }}
+        onClick={() => setShowDescription(!showDescription)}
+        >
         <p>{item.description}</p>
       </div>
       <button onClick={handleClick}>LOVE</button>

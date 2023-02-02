@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import GalleryList from "./GalleryList/GalleryList";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
-
+import PopularPlaces from "../PopularPlaces/PopularPlaces";
 
 //create a function to fetchData from the serverside using the GET method
 //update state with the response
@@ -36,8 +37,8 @@ function App() {
       .then((response) => {
         setGalleryList((prevGalleryList) =>
           prevGalleryList.map((item) => {
-          //check if the current item's id matches the id passed in
-          //if it does then increment the likes
+            //check if the current item's id matches the id passed in
+            //if it does then increment the likes
             if (item.id === id) {
               item.likes += 1;
             }
@@ -51,7 +52,6 @@ function App() {
       });
   };
 
-
   return (
     <div className="App">
       <header className="App-header">
@@ -62,12 +62,21 @@ function App() {
                 <a href="#">HOME</a>
               </li>
               <li>
-                <a href="#">POPULAR PLACES</a>
-              </li>
-              <li>
                 <a href="#">CONTACT US</a>
               </li>
             </ul>
+            <Router>
+              <div>
+                <ul>
+                  <li>
+                    <Link to="/">POPULAR PLACES</Link>
+                  </li>
+                </ul>
+              </div>
+              <Route path="/">
+                <PopularPlaces />
+              </Route>
+            </Router>
           </nav>
           <div className="content">
             <h1> Travel Gallery</h1>
@@ -83,5 +92,5 @@ function App() {
     //galleryList component and pass in gallery list, classname and handlelike props
   );
 }
-
+//Added routes for practice *ignore it*
 export default App;
